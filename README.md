@@ -1,4 +1,4 @@
-theme: jekyll-theme-Architect
+theme: jekyll-theme-architect
 # Heading 1
 
 ## Heading 2
@@ -26,5 +26,4 @@ _Italic Text_
 3. Numbered Item 3
 
 > Blockquote
-> theme: ARCHITECT
 
