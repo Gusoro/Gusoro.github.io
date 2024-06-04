@@ -1,4 +1,7 @@
-theme: jekyll-theme-architect
+---
+layout: default
+---
+
 # Heading 1
 
 ## Heading 2
@@ -27,3 +30,4 @@ _Italic Text_
 
 > Blockquote
 
+`Inline Code`
