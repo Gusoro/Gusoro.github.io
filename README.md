@@ -1,5 +1,7 @@
 # Gustavo Orocio
 
+![Gustavo Orocio](Gustavo.Orocio_919.jpg)
+
 - Phone: (925) 818-3463
 - Email: Gustavoorocio@gmail.com
 - Location: San Francisco, CA
