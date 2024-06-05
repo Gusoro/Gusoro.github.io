@@ -1,6 +1,6 @@
 # Gustavo Orocio
 
-<img src="Gustavo.Orocio_919.jpg" width="200">
+<img src="Gustavo.Orocio_919.jpg" width="200"> <img src="USFD.png" alt="USFD" width="200">
 
 - Phone: (925) 818-3463
 - Email: Gustavoorocio@gmail.com
