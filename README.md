@@ -1,130 +1,136 @@
-<style>
-  body {
-    background-color: #F2F2F2;
-    font-family: Arial, sans-serif;
-  }
+// Resume data
+const resume = {
+  name: "Gustavo Orocio",
+  title: "Consultant",
+  phone: "(925)818-3463",
+  email: "Gustavoorocio@gmail.com",
+  location: "San Francisco, CA",
+  education: [
+    {
+      university: "University of San Francisco",
+      location: "Downtown San Francisco",
+      degree: "M.S of Entrepreneurship & Innovation",
+      gpa: "3.9"
+    },
+    {
+      university: "Ottawa University Arizona",
+      location: "Surprise, AZ",
+      degree: "Student Athlete: Men’s Soccer Scholarship Recipient"
+    }
+  ],
+  experience: [
+    {
+      duration: "Aug. 2023 - Aug. 2024",
+      position: "Consultant",
+      company: "C-space",
+      location: "San Francisco, CA (Remote)",
+      responsibilities: [
+        "Advised clients like Charles Schwab and Citizens Bank using insights to guide product launches and marketing.",
+        "Conducted global research, analyzed trends, and developed solutions by engaging communities and monitoring brand perception.",
+        "Successfully managed and moderated an online community with over 400 members, representing the voice of the customer to the internal team and client."
+      ]
+    },
+    {
+      duration: "Jan. 2024 - Present",
+      position: "Operations Manager",
+      company: "Professional Real Estate Investments LLC",
+      location: "Contra Costa County, CA",
+      responsibilities: [
+        "Range of duties includes managing cash inflow/outflow, forecasting/projections, and operational management."
+      ]
+    },
+    {
+      duration: "Jan. 2019 - Aug. 2023",
+      position: "Corporate Development Associate",
+      company: "Prudential Financial",
+      location: "Newark, New Jersey (Remote)",
+      responsibilities: [
+        "Conducted thorough financial due diligence for transactions valued over $750 million.",
+        "Developed and presented strategic analyses for Prudential's executive team, resulting in a 13% increase in department revenue during the quarter."
+      ]
+    },
+    {
+      duration: "Jan. 2022 - Mar. 2022",
+      position: "Risk Associate",
+      company: "BHG Financials",
+      location: "New York, NY (Remote)",
+      responsibilities: [
+        "Reduced default rates by 10% through implementation of new risk management strategies.",
+        "Improved loan approval process efficiency by 15% through streamlining risk assessment procedures."
+      ]
+    }
+  ],
+  clubs: [
+    "University of San Francisco Startup Club",
+    "University of San Francisco Men’s Club Soccer",
+    "Student Athlete Advisory Committee Member",
+    "American Marketing Association Club Member"
+  ]
+};
 
-  .container {
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
-    padding: 20px;
-  }
+// Generate HTML code
+function generateResumeHTML(resume) {
+  let html = `
+    <h1>${resume.name}</h1>
+    <h2>${resume.title}</h2>
+    <p>Phone: ${resume.phone}</p>
+    <p>Email: ${resume.email}</p>
+    <p>Location: ${resume.location}</p>
+    
+    <h3>Education</h3>
+    <ul>
+  `;
 
-  h1 {
-    color: #00A6EB;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 10px;
-  }
+  resume.education.forEach(edu => {
+    html += `
+      <li>${edu.degree} - ${edu.university}, ${edu.location}</li>
+    `;
+  });
 
-  img {
-    width: 200px;
-    height: auto;
-    border: 1px solid #000000;
-  }
+  html += `
+    </ul>
+    <h3>Experience</h3>
+  `;
 
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
+  resume.experience.forEach(exp => {
+    html += `
+      <div>
+        <h4>${exp.duration}</h4>
+        <h4>${exp.position}</h4>
+        <h5>${exp.company}, ${exp.location}</h5>
+        <ul>
+    `;
 
-  li {
-    margin-bottom: 10px;
-  }
-</style>
+    exp.responsibilities.forEach(responsibility => {
+      html += `
+        <li>${responsibility}</li>
+      `;
+    });
 
-<div class="container">
-  <h1>Gustavo Orocio</h1>
+    html += `
+        </ul>
+      </div>
+    `;
+  });
 
- <img src="Gustavo.Orocio_919.jpg" width="200">
+  html += `
+    <h3>Clubs & Activities</h3>
+    <ul>
+  `;
 
-  <ul>
-    <li>Phone: (925) 818-3463</li>
-    <li>Email: Gustavoorocio@gmail.com</li>
-    <li>Location: San Francisco, CA</li>
-  </ul>
+  resume.clubs.forEach(club => {
+    html += `
+      <li>${club}</li>
+    `;
+  });
 
-  <h2>Education</h2>
+  html += `
+    </ul>
+  `;
 
-  <ul>
-    <li>
-      University of San Francisco, Downtown San Francisco
-      <ul>
-        <li>M.S of Entrepreneurship & Innovation</li>
-        <li>GPA: 3.9</li>
-      </ul>
-    </li>
-    <li>
-      Ottawa University Arizona, Surprise, AZ
-      <ul>
-        <li>Student Athlete: Men's Soccer Scholarship Recipient</li>
-      </ul>
-    </li>
-  </ul>
+  return html;
+}
 
-  <h2>Experience</h2>
-
-  <h3>Aug. 2023 - Aug. 2024</h3>
-  <p>Graduated May 2023</p>
-
-  <h4>Consultant</h4>
-  <p>C-space, San Francisco, CA (Remote)</p>
-  <ul>
-    <li>
-      Advised clients like Charles Schwab and Citizens Bank using insights to guide product launches and marketing.
-    </li>
-    <li>
-      Conducted global research, analyzed trends, and developed solutions by engaging communities and monitoring brand
-      perception.
-    </li>
-    <li>
-      Successfully managed and moderated an online community with over 400 members, representing the voice of the
-      customer to the internal team and client.
-    </li>
-  </ul>
-
-  <h3>Jan. 2024 - Present</h3>
-
-  <h4>Operations Manager</h4>
-  <p>Professional Real Estate Investments LLC, Contra Costa County, CA</p>
-  <ul>
-    <li>
-      Range of duties includes managing cash inflow/outflow, forecasting/projections, and operational management.
-    </li>
-  </ul>
-
-  <h3>Jan. 2019 - Aug. 2023</h3>
-
-  <h4>Corporate Development Associate</h4>
-  <p>Prudential Financial, Newark, New Jersey (Remote)</p>
-  <ul>
-    <li>
-      Conducted thorough financial due diligence for transactions valued over $750 million.
-    </li>
-    <li>
-      Developed and presented strategic analyses for Prudential's executive team, resulting in a 13% increase in department
-      revenue during the quarter.
-    </li>
-  </ul>
-
-  <h3>Jan. 2022 - Mar. 2022</h3>
-
-  <h4>Risk Associate</h4>
-  <p>BHG Financials, New York, NY (Remote)</p>
-  <ul>
-    <li>
-      Reduced default rates by 10% through implementation of new risk management strategies.
-    </li>
-    <li>
-      Improved loan approval process efficiency by 15% through streamlining risk assessment procedures.
-    </li>
-  </ul>
-
-  <h2>Clubs & Activities</h2>
-
-  <ul>
-    <li>Mar. 2024 - Present: University of San Francisco Startup Club, San Francisco, CA</li>
-    <li>Dec. 2024 - Present: University of San Francisco Men's Club Soccer, San Francisco, CA</li>
-    <li>Aug. 2022 - Jul. 2023: Student Athlete Advisory Committee Member, Surprise, AZ</li>
-    <li>Aug. 2020 - Jul. 2022: American Marketing Association Club Member, Sacramento, CA</li>
-  </ul>
-</div>
+// Example usage
+const resumeHTML = generateResumeHTML(resume);
+console.log(resumeHTML);
