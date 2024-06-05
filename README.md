@@ -11,7 +11,7 @@
   }
 
   h1 {
-    color: #FF0000;
+    color: #00A6EB;
     border-bottom: 1px solid #000000;
     padding-bottom: 10px;
   }
@@ -35,7 +35,7 @@
 <div class="container">
   <h1>Gustavo Orocio</h1>
 
- <img src="Gustavo.Orocio_919.jpg" width="200">
+  <img src="Gustavo.Orocio_919.jpg" alt="Gustavo Orocio">
 
   <ul>
     <li>Phone: (925) 818-3463</li>
