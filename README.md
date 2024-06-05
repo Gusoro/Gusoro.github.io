@@ -35,7 +35,7 @@
 <div class="container">
   <h1>Gustavo Orocio</h1>
 
-  <img src="Gustavo.Orocio_919.jpg" alt="Gustavo Orocio">
+ <img src="Gustavo.Orocio_919.jpg" width="200">
 
   <ul>
     <li>Phone: (925) 818-3463</li>
