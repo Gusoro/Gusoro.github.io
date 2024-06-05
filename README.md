@@ -133,4 +133,4 @@ function generateResumeHTML(resume) {
 
 // Example usage
 const resumeHTML = generateResumeHTML(resume);
-console.log(resumeHTML);
+document.getElementById("resume").innerHTML = resumeHTML;
